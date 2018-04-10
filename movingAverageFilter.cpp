@@ -32,15 +32,15 @@ movAvgFilter::movAvgFilter()
 
 	cout<<"input filter size window, N"<<endl;
 	cin>>N; // 5
-	cout<<" input points per trace"<<endl; // realistically we wouldnt restrict it like this for GPR
+	cout<<" input points per trace"<<endl; // realistically we wouldnt restrict it like this for a radar
 	 cin>>ppTrace; // 4
 }
 
 
 double movAvgFilter::subFilter()
 {
-	//Write a function/method to be called as each new measurement is received from the GPR
-// the next step would be to properly format this function to recieve GPR input measurements
+	//Write a function/method to be called as each new measurement is received from the radar
+// the next step would be to properly format this function to recieve radar input measurements
 	// current stand-in is using cin>> method for input
 	runTot = 0;
 	cols = 5;
@@ -55,7 +55,7 @@ for(int i = 0; i < cols;i++){
 		vtemp.push_back(gprIn);
 		}
 
-	v.push_back(vtemp); //array constructed with GPR value for trace i+1 (row by row)
+	v.push_back(vtemp); //array constructed with radar value for trace i+1 (row by row)
 
 	vector<double> vAvgTemp;
 	for(int k =0; k< ppTrace;k++){
