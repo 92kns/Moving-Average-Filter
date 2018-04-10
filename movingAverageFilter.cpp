@@ -1,5 +1,5 @@
 // idea is to collect input from some embedded device (i dunno say some motion/thermal sensor or something) and track a rolling average
-// use of classes was practice, not meant to be "performant"
+// 
 // 
 
 #include <iostream>
